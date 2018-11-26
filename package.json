@@ -1,6 +1,6 @@
 {
   "name": "@beanutils/webstorage",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.3",
   "description": "extension localstorage and sessionstorage",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -36,10 +36,10 @@
     "test": "jest",
     "lint": "eslint -c .eslintrc.json --fix --ext .js src/",
     "package": "cross-env BUILD_PATH=dist npm run build:prod",
-    "publish:prerelease": "npm run package && gulp version-prerelease && npm publish",
-    "publish:patch": "npm run package && gulp version-patch && npm publish",
-    "publish:minor": "npm run package && gulp version-minor && npm publish",
-    "publish:major": "npm run package && gulp version-major && npm publish",
+    "publish:prerelease": "npm run package && gulp version-prerelease && npm publish --access=public && npm run git:push",
+    "publish:patch": "npm run package && gulp version-patch && npm publish --access=public && npm run git:push",
+    "publish:minor": "npm run package && gulp version-minor && npm publish --access=public && npm run git:push",
+    "publish:major": "npm run package && gulp version-major && npm publish --access=public && npm run git:push",
     "unpublish": "npm unpublish -f",
     "git:push": "gulp git-push"
   },
