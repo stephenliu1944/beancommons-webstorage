@@ -1,15 +1,15 @@
-# @beanutils/webstorage
+# @beancommons/webstorage
 Extension localstorage and sessionstorage.
 
 ## Install
 ```
-npm install --save @beanutils/webstorage
+npm install --save @beancommons/webstorage
 ```
 
 ## Usage
 LocalStorage 和 SessionStorage 方法封装
 ```
-import { setLocal, getLocal } from '@beanutils/webstorage';
+import { setLocal, getLocal } from '@beancommons/webstorage';
 setLocal('key', value);
 getLocal('key);
 ```
